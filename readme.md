@@ -113,6 +113,8 @@ pip install -r requirements.txt
 
 *Jakankan ke-2 promp ini pada terminal terpisah
 
+##
+
 <details>
   <summary>
     <strong>🖼️ Running Laravel (frontend)</strong>
@@ -141,4 +143,6 @@ masuk ke dalam venv terlebih dahulu (Instalasi > `🗝️ Activate venv`)
 python app.py
 ```
 </details> 
+
+##
 
