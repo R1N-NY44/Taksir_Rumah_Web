@@ -1,0 +1,22 @@
+Taksir_Rumah/.phpunit.cache
+Taksir_Rumah/node_modules
+Taksir_Rumah/public/build
+Taksir_Rumah/public/hot
+Taksir_Rumah/public/public/post
+# /public/storage
+Taksir_Rumah/storage/*.key
+Taksir_Rumah/vendor
+Taksir_Rumah/.env
+Taksir_Rumah/.env.backup
+Taksir_Rumah/.env.production
+Taksir_Rumah/.phpunit.result.cache
+Taksir_Rumah/Homestead.json
+Taksir_Rumah/Homestead.yaml
+Taksir_Rumah/auth.json
+Taksir_Rumah/npm-debug.log
+Taksir_Rumah/yarn-error.log
+Taksir_Rumah/.fleet
+Taksir_Rumah/.idea
+Taksir_Rumah/.vscode
+Taksir_Rumah/composer.lock
+api/venv
