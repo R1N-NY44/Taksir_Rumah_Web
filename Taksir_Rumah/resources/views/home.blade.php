@@ -21,23 +21,23 @@
                 <form id="predictionForm">
                     <div class="mb-3">
                         <label>Luas Tanah (m²)</label>
-                        <input type="number" class="form-control" id="luas_tanah" name="luas_tanah" required>
+                        <input type="number" class="form-control" id="luas_tanah" name="luas_tanah" min="1" required>
                     </div>
                     <div class="mb-3">
                         <label>Luas Bangunan (m²)</label>
-                        <input type="number" class="form-control" id="luas_bangunan" name="luas_bangunan" required>
+                        <input type="number" class="form-control" id="luas_bangunan" name="luas_bangunan" min="1" required>
                     </div>
                     <div class="mb-3">
                         <label>Jumlah Kamar Tidur</label>
-                        <input type="number" class="form-control" id="kamar_tidur" name="kamar_tidur" required>
+                        <input type="number" class="form-control" id="kamar_tidur" name="kamar_tidur" min="1" required>
                     </div>
                     <div class="mb-3">
                         <label>Jumlah Kamar Mandi</label>
-                        <input type="number" class="form-control" id="kamar_mandi" name="kamar_mandi" required>
+                        <input type="number" class="form-control" id="kamar_mandi" name="kamar_mandi" min="1" required>
                     </div>
                     <div class="mb-3">
                         <label>Jumlah Lantai</label>
-                        <input type="number" class="form-control" id="jumlah_lantai" name="jumlah_lantai" required>
+                        <input type="number" class="form-control" id="jumlah_lantai" name="jumlah_lantai" min="1" required>
                     </div>
                     <div class="mb-3">
                         <label>Pilih Wilayah</label>
@@ -142,6 +142,13 @@
                 jumlah_lantai: document.getElementById('jumlah_lantai').value,
                 region: document.getElementById('region').value
             };
+
+            for (const key in data) {
+                if (key !== 'region' && (!data[key] || data[key] <= 0)) {
+                    alert('Semua input numerik harus lebih besar dari 0.');
+                    return;
+                }
+            }
 
             try {
                 const response = await fetch('https://api-taksirrumah.zero-dev.my.id/predict', {
